@@ -1,13 +1,10 @@
 # Create a file called .github/workflows/auto-publish.yml
 name: CI
-on:
-  pull_request: {}
-  push:
-    branches: [main]
+on: push
 jobs:
   main:
     name: Build, Validate and Deploy Locally
-    runs-on: ubuntu-22.04
+    runs-on: puzl-ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - uses: w3c/spec-prod@v2
